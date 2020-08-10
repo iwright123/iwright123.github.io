@@ -29,17 +29,20 @@ console.log(animal);
 
 var noises = [];
 //adds Bark to the 0 index of the noises array
-noises[0] = 'Bark';
+noises = ['Bark'];
 //adds Ruff to noises using dot notation
 noises.push('Ruff');
 //adds GRR to the noises array using dot notation 
 noises.unshift('GRR');
 //adds snoring to the 1 index of the noises array
-noises[1] = 'snoring';
+function animalsNoises(noise){
+    noises.push(noise);
+}
+animalsNoises('Woof');
 
 
 console.log(noises.length);
-console.log(noises.length - 1);
+console.log(noises[3]);
 
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Combining Step 1 and 2 ///////////////////////////////////
@@ -47,10 +50,8 @@ console.log(noises.length - 1);
 
 // adds the new noises array to the animal object
 animal['noises'] = noises;
-
-animal.noises[noises.length] = 'rurrrr';
-console.log(animal);
-animal.noises[noises.length] = 'wooooo';
+console.log(noises);
+animal['noises'].push('Sniffy');
 console.log(animal);
 
 
@@ -102,7 +103,7 @@ var tiger = {
     noises: ['grawl', 'hiss', 'purr']
 };
 
-
+animals.push(tiger);
 // created an object with name , species and noises keys
 var frog = {
     name: 'Fred',
@@ -110,7 +111,11 @@ var frog = {
     noises: ['ribbit', 'chrip']
 };
 //pushes tiger and fron into the animals array
-animals.push(tiger, frog);
+animals.push(frog);
+
+
+console.log(animals);
+console.log(animals.length);
 //////////////////////////////////////////////////////////////////////
 // Step 7 - Making Friends ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
@@ -121,11 +126,14 @@ var friends = [];
 
 //cretaed a function that will return a random index of the animals array
 function getRandom (animals) {
-  
+
+
+  //math random will generate a random index, using the animals array length to give a number from the array
 return Math.floor(Math.random() * animals.length);
 
     
 }
+
 // the for loop will loop the animals array
 for (let i = 0; i < animals.length; i++) {
     // this will push a random index from the animals array into the friends array
@@ -136,7 +144,7 @@ animals[1]['friends'] = friends;
 
 
 
-
+console.log(friends);
 
 
 

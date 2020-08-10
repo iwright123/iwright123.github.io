@@ -13,27 +13,27 @@
 // Step 1 - Search ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-function search(animals, string) {
+function search(array, string) {
  
  // will loop the animals array
- for (let i = 0; i < animals.length; i++){
+ for (let i = 0; i < array.length; i++){
   //if animals name is equal to the string it will return the name
-  if(animals[i].name.toLowerCase() === string.toLowerCase()) {
-      return animals[i];
+  if(array[i].name.toLowerCase() === string.toLowerCase()) {
+      return array[i];
  }
 }
 
 // this will also loop and search the array
-for (let i = 0; i < animals.length; i++) {
+for (let i = 0; i < array.length; i++) {
  // this if statment will return null if the name does not match the string 
- if(animals[i].name.toLowerCase() !== string.toLowerCase()) {
+ if(array[i].name.toLowerCase() !== string.toLowerCase()) {
   return null;
  }
 }
 
 
 }
-search();
+
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Replace //////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
@@ -43,7 +43,7 @@ function replace(animals, name, replacement) {
  for (let i = 0; i < animals.length; i++){
   // if aniamls name is equal to name, the animals name will replace the object 
   if(animals[i].name.toLowerCase() == name.toLowerCase()) {
-     animals[i] = replacement;
+     return animals[i] = replacement;
  }
 }
  
@@ -66,7 +66,7 @@ function remove(animals, name) {
 
 }
 
-remove();
+
 //////////////////////////////////////////////////////////////////////
 // Step 4 - Add ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
